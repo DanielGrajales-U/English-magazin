@@ -1,0 +1,27 @@
+---
+// Props for the component
+const { email, name, subject = '', body = '' } = Astro.props
+
+// Encode the subject and body to be URL safe
+const encodedSubject = encodeURIComponent(subject)
+const encodedBody = encodeURIComponent(body)
+
+// Create the mailto link
+const mailtoLink = `mailto:${email}?subject=${encodedSubject}&body=${encodedBody}`
+---
+
+<a href={mailtoLink}>{name}</a>
+
+<style>
+  a {
+    color: var(--gray-400);
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration-color: currentColor;
+  }
+</style>

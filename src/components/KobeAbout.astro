@@ -1,0 +1,125 @@
+<main class='wrapper about'>
+  <section>
+    <h2 class='section-title'>Early live</h2>
+    <div class='content'>
+      <p>
+        Kobe Bean Bryant was born on <b>August 23, 1978, in Philadelphia</b>. He was the youngest of
+        three children and the only son of former <b>NBA player</b> Joe "Jellybean" Bryant and Pamela
+        Cox Bryant. His father’s career took the family to Italy when Kobe was six years old, where he
+        developed a <b>love for both basketball and soccer</b>. Bryant returned to the United States
+        during his teenage years and attended <b>Lower Merion High School in Ardmore</b>,
+        Pennsylvania, where he quickly became a <b>basketball prodigy</b>.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Path to the NBA</h2>
+    <div class='content'>
+      <p>
+        <b>Bryant's high school career was nothing short of spectacular</b>. He led his team to a
+        state championship during his senior year and earned several accolades, including the <b
+          >Naismith High School Player</b
+        > of the Year, <b>Gatorade Men's National Basketball Player</b> of the Year, and a <b
+          >McDonald's All-American</b
+        >. Despite <b>receiving offers from top college programs</b>, Kobe decided to declare for
+        the <b>NBA draft directly from high school</b>, a bold move that was relatively rare at the
+        time.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Draft and Early Years</h2>
+    <div class='content'>
+      <p>
+        In <b>1996</b>, Kobe Bryant was selected <b
+          >13th overall by the Charlotte Hornets in the NBA Draft</b
+        >, but he was quickly traded to the <b>Los Angeles Lakers</b>, where he would spend his
+        entire <b>20-year career</b>. Initially, Bryant had to prove himself, often coming off the
+        bench. However, his talent soon became undeniable.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Origin of the name The Black Mamba</h2>
+    <div class='content'>
+      <p>
+        Bryant's nickname, <b>"The Black Mamba,"</b> originated during a difficult period in his career.
+        Inspired by the movie <b>"Kill Bill,"</b> in which an assassin uses a <b
+          >black mamba snake</b
+        >, Bryant adopted the nickname to separate his personal struggles from his professional
+        persona. The black mamba, known for its agility and aggression, symbolized Bryant's approach
+        on the basketball court.
+      </p>
+    </div>
+    <section>
+      <h2 class='section-title'>Legacy</h2>
+      <div class='content'>
+        <p>
+          Tragically, Kobe Bryant's life was cut short on <b>January 26, 2020</b>, when he, his
+          daughter Gianna, and seven others perished in a helicopter crash in Calabasas, California.
+          His legacy, however, continues to inspire athletes and fans around the world, embodying
+          the essence of the <b>Mamba Mentality</b>: relentless pursuit of excellence, resilience,
+          and unwavering dedication.
+        </p>
+      </div>
+    </section>
+
+    <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+      }
+
+      .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+      }
+
+      .content {
+        grid-column: 2 / 4;
+      }
+
+      .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+      }
+
+      .content :global(a:hover),
+      .content :global(a:focus) {
+        text-decoration-color: currentColor;
+      }
+
+      @media (min-width: 50em) {
+        .about {
+          display: grid;
+          grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+          grid-column-start: 2;
+        }
+
+        section {
+          display: contents;
+          font-size: var(--text-lg);
+        }
+      }
+    </style>
+  </section>
+</main>
