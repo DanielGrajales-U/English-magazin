@@ -1,0 +1,63 @@
+
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="box skills">
+	<div class="stack gap-2 lg:gap-4">
+		<Icon name="mdi:microphone" size={44}/>
+		<h2>Vocal Talent</h2>
+		<p>Renowned for his powerful voice and emotive singing style, making him a legendary figure in salsa music.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+		<Icon name="mdi:album" size={44}/>
+		<h2>Hit Records</h2>
+		<p>Produced numerous classic salsa hits, including 'El Cantante', 'Periódico de Ayer', and 'Mi Gente'.</p>
+	</div>
+	<div class="stack gap-2 lg:gap-4">
+			<Icon name="mdi:music-note" size={44}/>
+	<h2>Influence</h2>
+		<p>Influenced generations of Latin musicians and continues to be celebrated for his contributions to music.</p>
+	</div>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+
+	.skills h2 {
+		font-size: var(--text-lg);
+	}
+
+	.skills p {
+		color: var(--gray-400);
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
+
+		.skills h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>

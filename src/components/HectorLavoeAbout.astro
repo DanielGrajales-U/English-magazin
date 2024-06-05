@@ -1,0 +1,102 @@
+
+<main class='wrapper about'>
+  <section>
+    <h2 class='section-title'>Early Life</h2>
+    <div class='content'>
+      <p>
+        Héctor Juan Pérez Martínez, known as Héctor Lavoe, was born on <b>September 30, 1946, in Ponce, Puerto Rico</b>. He grew up in a musical family, and from a young age, he showed an exceptional talent for singing. Lavoe attended the Juan Morel Campos Public School of Music, where he received formal training that laid the foundation for his future career.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Career Beginnings</h2>
+    <div class='content'>
+      <p>
+        In 1963, at the age of 17, Lavoe moved to New York City to pursue his musical dreams. He quickly became involved in the vibrant Latin music scene, joining several bands. His big break came in 1967 when he joined forces with Willie Colón, a collaboration that produced numerous hits and made Lavoe a star. Their music combined traditional salsa with innovative elements, captivating audiences across the United States and Latin America.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Rise to Fame</h2>
+    <div class='content'>
+      <p>
+        Lavoe's powerful voice and charismatic stage presence earned him the title "El Cantante de los Cantantes" (The Singer of Singers). He released several successful albums with Willie Colón before embarking on a solo career in the late 1970s. His solo hits, including <b>"El Cantante"</b>, <b>"Periódico de Ayer"</b>, and <b>"Mi Gente"</b>, solidified his place as one of salsa's greatest performers.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Personal Struggles</h2>
+    <div class='content'>
+      <p>
+        Despite his success, Lavoe struggled with numerous personal issues, including addiction and depression. The pressures of fame and personal tragedies, such as the death of his son, took a toll on his health and career. These struggles were poignantly captured in the biographical film <b>El Cantante</b>, starring Marc Anthony and Jennifer Lopez.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Legacy and Influence</h2>
+    <div class='content'>
+      <p>
+        Héctor Lavoe passed away on <b>June 29, 1993</b>, but his legacy lives on. He is remembered as one of the most influential figures in salsa music, with his songs continuing to be celebrated and covered by new generations of artists. Lavoe's life and music have left an indelible mark on the Latin music world, symbolizing the passion, struggle, and spirit of salsa.
+      </p>
+    </div>
+  </section>
+
+     <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+      }
+
+      .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+      }
+
+      .content {
+        grid-column: 2 / 4;
+      }
+
+      .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+      }
+
+      .content :global(a:hover),
+      .content :global(a:focus) {
+        text-decoration-color: currentColor;
+      }
+
+      @media (min-width: 50em) {
+        .about {
+          display: grid;
+          grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+          grid-column-start: 2;
+        }
+
+        section {
+          display: contents;
+          font-size: var(--text-lg);
+        }
+      }
+    </style>
+
+</main>

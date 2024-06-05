@@ -10,12 +10,12 @@ import Grid from '../components/Grid.astro'
 import Hero from '../components/Hero.astro'
 import Icon from '../components/Icon.astro'
 import Pill from '../components/Pill.astro'
-import KobeAbout from '../components/KobeAbout.astro'
+import ConorAbout from '../components/ConorMcgregorAbout.astro'
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro'
-import Skills from '../components/Skills.astro'
-
+import Skills from '../components/ConorMcgregorSkills.astro'
+import { Icon } from 'astro-icon/components'
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -30,20 +30,20 @@ const projects = (await getCollection('work'))
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero'>
         <Hero
-          title='Kobe Bryant: The Black Mamba'
-          tagline='I was an elite basketball player in the biggest competition in the NBA'
+          title='Conor McGregor: The Notorious'
+          tagline='A dominant force in the world of mixed martial arts'
           align='start'
         >
           <div class='roles'>
-            <Pill><Icon icon='dribbble-logo' size='1.33em' />Basketball</Pill>
+            <Pill><Icon name='mdi:boxing-glove' size={24} />MMA</Pill>
           </div>
         </Hero>
 
         <img
-          alt='Jeanine White smiling in a red plaid shirt and tortoise shell glasses'
+          alt='Conor McGregor in a fight stance'
           width='480'
           height='620'
-          src='/assets/kobe portrait.jpeg'
+          src='/assets/mcgregor.png'
         />
       </header>
 
@@ -51,30 +51,30 @@ const projects = (await getCollection('work'))
     </div>
 
     <main class='wrapper stack gap-20 lg:gap-48'>
-      <KobeAbout />
+      <ConorAbout />
       <section class='section with-background bg-variant'>
         <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Mentions</h3>
-          <p>Kobe Bryant's career is marked by numerous achievements and milestones.</p>
+          <h3>Achievements</h3>
+          <p>Conor McGregor's career is marked by numerous achievements and milestones.</p>
         </header>
 
         <div class='gallery'>
           <Grid variant='small'>
             {
               [
-                { title: 'Five NBA Championships', text: '2000, 2001, 2002, 2009, and 2010.' },
-                { title: 'Two NBA Finals MVP Awards', text: '2009 and 2010.' },
+                { title: 'Two-Division UFC Champion', text: 'Featherweight and Lightweight champion.' },
+                { title: 'Fastest Title Fight Victory', text: '13 seconds against José Aldo.' },
                 {
-                  title: 'Eighteen All-Star Selections',
-                  text: 'All-Star in 18 of his 20 seasons.'
+                  title: 'Successful Pay-Per-View Record',
+                  text: 'Highest-grossing PPV fighter in UFC history.'
                 },
                 {
-                  title: 'Two Olympic Gold Medals',
-                  text: '2008 and 2012.'
+                  title: 'Boxing Match with Floyd Mayweather',
+                  text: 'Crossed over to boxing for a highly publicized fight.'
                 },
                 {
-                  title: 'Scoring Titles and Records',
-                  text: '2006, 2007, 81 points in a game.'
+                  title: 'Influence on MMA Popularity',
+                  text: 'Helped elevate the global profile of the sport.'
                 }
               ].map(brand => (
                 <li class='mention-card card'>
@@ -92,10 +92,7 @@ const projects = (await getCollection('work'))
         <header class='section-header stack gap-2 lg:gap-4'>
           <h3>Opinion</h3>
           <p>
-            Kobe Bryant was and continues to be an inspiration for many, not only in the field of
-            basketball since his disciplined and focused mentality applies to everything in life, he
-            was a great person who captivated with his charisma and also his character only put his
-            family ahead of his goals.
+            Conor McGregor is not just a fighter; he is a brand, an inspiration, and a testament to the power of confidence and hard work. His rise from nothing to the top of the fighting world is a story of determination and charisma.
           </p>
         </header>
       </section>
@@ -103,11 +100,9 @@ const projects = (await getCollection('work'))
     <main class='wrapper stack gap-20 lg:gap-48'>
       <section class='section with-background bg-variant'>
         <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Wher I met him</h3>
+          <h3>Where I Met Him</h3>
           <p>
-            I met him already watching his games in the NBA, being a fan of the world of sports
-            especially basketball, I got to see some games live and many others on youtube watching
-            his story and his best plays.
+            I became a fan watching his meteoric rise in the UFC, witnessing his charismatic interviews and electrifying fights that captivated audiences around the world.
           </p>
         </header>
       </section>
@@ -167,8 +162,6 @@ const projects = (await getCollection('work'))
       object-fit: cover;
     }
   }
-
-  /* ====================================================== */
 
   .section {
     display: grid;
@@ -249,8 +242,6 @@ const projects = (await getCollection('work'))
     }
   }
 
-  /* ====================================================== */
-
   .mention-card {
     display: flex;
     height: 7rem;
@@ -271,3 +262,4 @@ const projects = (await getCollection('work'))
     }
   }
 </style>
+

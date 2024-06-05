@@ -1,0 +1,96 @@
+
+
+<main class='wrapper about'>
+  <section>
+    <h2 class='section-title'>Early Life</h2>
+    <div class='content'>
+      <p>
+        Howard Phillips Lovecraft was born on <b>August 20, 1890, in Providence, Rhode Island</b>. Raised by his mother and aunts after his father's mental collapse and subsequent institutionalization, Lovecraft was a sickly child who spent much of his time reading. He developed a love for classical literature and science, and by his teens, he was writing his own stories and poetry.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Writing Career</h2>
+    <div class='content'>
+      <p>
+        Lovecraft began publishing his stories in pulp magazines in the early 1920s. His unique blend of horror, science fiction, and elaborate mythologies set his work apart. Key stories from this period include <b>The Call of Cthulhu</b> and <b>The Shadow over Innsmouth</b>. Despite his talent, Lovecraft struggled financially and was never widely recognized during his lifetime. He often revised and ghostwrote for other authors to make ends meet.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>The Cthulhu Mythos</h2>
+    <div class='content'>
+      <p>
+        Lovecraft's most significant contribution to literature is the creation of the Cthulhu Mythos, a shared universe populated by ancient, cosmic deities and beings. This mythology, characterized by themes of forbidden knowledge and the insignificance of humanity, has had a profound influence on horror and science fiction. Authors like Stephen King and Neil Gaiman have cited Lovecraft as a major influence.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Posthumous Recognition</h2>
+    <div class='content'>
+      <p>
+        Lovecraft died on <b>March 15, 1937</b>, largely unknown and impoverished. However, his work gained significant recognition posthumously, thanks in part to the efforts of friends and fellow writers like August Derleth and Donald Wandrei. Today, Lovecraft is celebrated as a master of horror, with his works being adapted into films, video games, and board games, solidifying his legacy in popular culture.
+      </p>
+    </div>
+  </section>
+
+      <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+      }
+
+      .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+      }
+
+      .content {
+        grid-column: 2 / 4;
+      }
+
+      .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+      }
+
+      .content :global(a:hover),
+      .content :global(a:focus) {
+        text-decoration-color: currentColor;
+      }
+
+      @media (min-width: 50em) {
+        .about {
+          display: grid;
+          grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+          grid-column-start: 2;
+        }
+
+        section {
+          display: contents;
+          font-size: var(--text-lg);
+        }
+      }
+    </style>
+
+</main>
+

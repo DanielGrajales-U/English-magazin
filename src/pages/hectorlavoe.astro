@@ -1,7 +1,6 @@
 
 ---
 import { getCollection } from 'astro:content'
-
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro'
 
@@ -10,12 +9,12 @@ import Grid from '../components/Grid.astro'
 import Hero from '../components/Hero.astro'
 import Icon from '../components/Icon.astro'
 import Pill from '../components/Pill.astro'
-import KobeAbout from '../components/KobeAbout.astro'
+import HectorAbout from '../components/HectorLavoeAbout.astro'
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro'
-import Skills from '../components/Skills.astro'
-
+import Skills from '../components/HectorLavoeSkills.astro'
+import { Icon } from 'astro-icon/components'
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -30,20 +29,21 @@ const projects = (await getCollection('work'))
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero'>
         <Hero
-          title='Kobe Bryant: The Black Mamba'
-          tagline='I was an elite basketball player in the biggest competition in the NBA'
+          title='Héctor Lavoe: The Singer of Singers'
+          tagline='A legendary figure in the world of salsa music'
           align='start'
         >
           <div class='roles'>
-            <Pill><Icon icon='dribbble-logo' size='1.33em' />Basketball</Pill>
+            <Pill><Icon name="mdi:music-note" size={24}/>
+Salsa Music</Pill>
           </div>
         </Hero>
 
         <img
-          alt='Jeanine White smiling in a red plaid shirt and tortoise shell glasses'
+          alt='Héctor Lavoe smiling while performing'
           width='480'
           height='620'
-          src='/assets/kobe portrait.jpeg'
+          src='/assets/hectorlavoe.jpg'
         />
       </header>
 
@@ -51,30 +51,30 @@ const projects = (await getCollection('work'))
     </div>
 
     <main class='wrapper stack gap-20 lg:gap-48'>
-      <KobeAbout />
+      <HectorAbout />
       <section class='section with-background bg-variant'>
         <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Mentions</h3>
-          <p>Kobe Bryant's career is marked by numerous achievements and milestones.</p>
+          <h3>Achievements</h3>
+          <p>Héctor Lavoe's career is marked by numerous achievements and milestones.</p>
         </header>
 
         <div class='gallery'>
           <Grid variant='small'>
             {
               [
-                { title: 'Five NBA Championships', text: '2000, 2001, 2002, 2009, and 2010.' },
-                { title: 'Two NBA Finals MVP Awards', text: '2009 and 2010.' },
+                { title: 'Iconic Songs', text: 'El Cantante, Periódico de Ayer, Mi Gente.' },
+                { title: 'Collaboration with Willie Colón', text: 'Produced several groundbreaking albums.' },
                 {
-                  title: 'Eighteen All-Star Selections',
-                  text: 'All-Star in 18 of his 20 seasons.'
+                  title: 'Influence on Salsa Music',
+                  text: 'Regarded as one of the most influential salsa singers of all time.'
                 },
                 {
-                  title: 'Two Olympic Gold Medals',
-                  text: '2008 and 2012.'
+                  title: 'Posthumous Recognition',
+                  text: 'Inducted into the International Latin Music Hall of Fame.'
                 },
                 {
-                  title: 'Scoring Titles and Records',
-                  text: '2006, 2007, 81 points in a game.'
+                  title: 'Cultural Impact',
+                  text: 'His life and music inspired the film "El Cantante" starring Marc Anthony.'
                 }
               ].map(brand => (
                 <li class='mention-card card'>
@@ -92,10 +92,7 @@ const projects = (await getCollection('work'))
         <header class='section-header stack gap-2 lg:gap-4'>
           <h3>Opinion</h3>
           <p>
-            Kobe Bryant was and continues to be an inspiration for many, not only in the field of
-            basketball since his disciplined and focused mentality applies to everything in life, he
-            was a great person who captivated with his charisma and also his character only put his
-            family ahead of his goals.
+            Héctor Lavoe's voice was more than just a sound; it was an expression of joy, pain, and the complexities of life. His contributions to salsa music are timeless, and his legacy lives on through his unforgettable music.
           </p>
         </header>
       </section>
@@ -103,11 +100,9 @@ const projects = (await getCollection('work'))
     <main class='wrapper stack gap-20 lg:gap-48'>
       <section class='section with-background bg-variant'>
         <header class='section-header stack gap-2 lg:gap-4'>
-          <h3>Wher I met him</h3>
+          <h3>Where I Met Him</h3>
           <p>
-            I met him already watching his games in the NBA, being a fan of the world of sports
-            especially basketball, I got to see some games live and many others on youtube watching
-            his story and his best plays.
+            My introduction to Héctor Lavoe came through my family's love for salsa music. His songs were a staple at gatherings, and I grew to appreciate his talent and passion for music.
           </p>
         </header>
       </section>
@@ -167,8 +162,6 @@ const projects = (await getCollection('work'))
       object-fit: cover;
     }
   }
-
-  /* ====================================================== */
 
   .section {
     display: grid;
@@ -249,8 +242,6 @@ const projects = (await getCollection('work'))
     }
   }
 
-  /* ====================================================== */
-
   .mention-card {
     display: flex;
     height: 7rem;
@@ -271,3 +262,4 @@ const projects = (await getCollection('work'))
     }
   }
 </style>
+

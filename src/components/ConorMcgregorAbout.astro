@@ -1,0 +1,103 @@
+
+
+<main class='wrapper about'>
+  <section>
+    <h2 class='section-title'>Early Life</h2>
+    <div class='content'>
+      <p>
+        Conor Anthony McGregor was born on <b>July 14, 1988, in Dublin, Ireland</b>. Growing up in the suburb of Crumlin, he developed a passion for sports, particularly soccer and boxing. McGregor began training in mixed martial arts (MMA) in 2006, inspired by his desire to be a professional athlete and the support of his coach, John Kavanagh.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Rise to Fame</h2>
+    <div class='content'>
+      <p>
+        McGregor's professional MMA career began in 2008. His combination of striking skills, charisma, and confident trash-talking quickly made him a fan favorite. In 2013, he signed with the <b>Ultimate Fighting Championship (UFC)</b>, where he made an immediate impact by winning his debut fight. McGregor's career skyrocketed after he won the <b>UFC Featherweight Championship</b> in 2015 by defeating José Aldo in just 13 seconds, setting a record for the fastest knockout in a title fight.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Historic Achievements</h2>
+    <div class='content'>
+      <p>
+        Conor McGregor made history in 2016 by becoming the first fighter in UFC history to hold titles in two weight classes simultaneously, winning both the Featherweight and Lightweight Championships. His bout against Floyd Mayweather in 2017, a cross-over boxing match, was one of the most lucrative events in combat sports history, showcasing his global appeal and marketing prowess.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Business Ventures</h2>
+    <div class='content'>
+      <p>
+        Beyond his fighting career, McGregor has ventured into business with considerable success. He launched <b>Proper No. Twelve Irish whiskey</b> in 2018, which has become a highly successful brand. McGregor's entrepreneurial spirit extends to fashion, fitness, and media, solidifying his status as a multifaceted personality.
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2 class='section-title'>Legacy and Impact</h2>
+    <div class='content'>
+      <p>
+        Conor McGregor's influence on MMA is undeniable. He brought unprecedented attention and financial success to the sport, inspiring a new generation of fighters. Despite controversies and setbacks, his impact on combat sports and popular culture remains significant. McGregor continues to be a polarizing figure, known for his outspokenness, fighting prowess, and business acumen.
+      </p>
+    </div>
+  </section>
+    <style>
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+      }
+
+      .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+      }
+
+      .content {
+        grid-column: 2 / 4;
+      }
+
+      .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+      }
+
+      .content :global(a:hover),
+      .content :global(a:focus) {
+        text-decoration-color: currentColor;
+      }
+
+      @media (min-width: 50em) {
+        .about {
+          display: grid;
+          grid-template-columns: 1fr 60% 1fr;
+        }
+
+        .about > :global(:first-child) {
+          grid-column-start: 2;
+        }
+
+        section {
+          display: contents;
+          font-size: var(--text-lg);
+        }
+      }
+    </style>
+
+</main>
+
