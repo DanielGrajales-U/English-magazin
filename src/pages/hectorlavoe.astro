@@ -7,7 +7,6 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 // Component Imports
 import Grid from '../components/Grid.astro'
 import Hero from '../components/Hero.astro'
-import Icon from '../components/Icon.astro'
 import Pill from '../components/Pill.astro'
 import HectorAbout from '../components/HectorLavoeAbout.astro'
 
@@ -25,7 +24,7 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-  <div class='stack gap-20 lg:gap-48'>
+  <div class='stack gap-20 lg:gap-48' transition:animate='slide'>
     <div class='wrapper stack gap-8 lg:gap-20'>
       <header class='hero'>
         <Hero
@@ -79,7 +78,7 @@ Salsa Music</Pill>
               ].map(brand => (
                 <li class='mention-card card'>
                   <p>{brand.title}</p>
-                  <span>{brand.text}</span>
+                  <span class='card-span'> {brand.text}</span>
                 </li>
               ))
             }
