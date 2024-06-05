@@ -36,7 +36,7 @@ const { title, description } = Astro.props;
 					const button = this.querySelector('button')!;
 
 					/** Set the theme to dark/light mode. */
-					const setTheme = (dark) => {
+					const setTheme = (dark: boolean) => {
 						document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
 						button.setAttribute('aria-pressed', String(dark));
 					};
